@@ -20,6 +20,10 @@
     play.addEventListener("click",
         function(){
 
+            // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
+            let arraybomb = randomBombPosition ();
+            console.log(arraybomb);
+
             // DICO CHE AD OGNI CLICK LA PAGINA SI SVUOTA PER POI RIEMPIRSI SUCCESSIVAMENTE COL FOR
             container.innerHTML = "";
 
@@ -43,9 +47,7 @@
                 )
             }
 
-            // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
-            let arraybomb = randomBombPosition ();
-            console.log(arraybomb);
+            
 
             
 
