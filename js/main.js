@@ -36,6 +36,12 @@
 
                 // Ogni cella ha un numero progressivo, da 1 a 100.
                 squareElement.append(i);
+                for (let i = 0 ; i < arraybomb.lenght ; i++) {
+                    if (squareElement === i) {
+                        squareElement.append(i);
+                        squareElement.classList.add("bomb");
+                    }
+                }
 
                 // FUNZIONE DI BACKGROUND COLOR AL CLICK DELLE CELLE
                 squareElement.addEventListener("click",
