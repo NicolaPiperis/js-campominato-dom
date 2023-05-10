@@ -47,6 +47,8 @@
             let arraybomb = randomBombPosition ();
             console.log(arraybomb);
 
+            
+
     
         }
     )
@@ -93,7 +95,7 @@ function randomBombPosition () {
     let intArray = [];
 
     // faccio generare numeri random per 16 volte con un ciclo
-    for (let i = intArray.length; i < 16 ; i++) {
+    for (let i = intArray.length; intArray.length < 16 ; i++) {
         let newNumber = randomBomb(1,100);
 
         // SE IL NUMERO GENERATO NON E' ANCORA STATO INTRODOTTO NELL'ARRAY, VERRA' FATTO, ALTRIMENTI GLI VERRA' NEGATO L'ACCESSO
