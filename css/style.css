@@ -89,6 +89,13 @@ main{
     background-color: red;
 }
 
+#risultato{
+    width: 40%;
+}
+
+.unclickable{
+    pointer-events: none;
+}
 
 
 

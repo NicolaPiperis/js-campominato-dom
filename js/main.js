@@ -14,7 +14,9 @@
     let play = document.getElementById("play");
     console.log(play);
 
-    
+        // TAG CHE CONTIENE IL RISULTATO FINALE
+    let esito = document.getElementById("risultato");
+
 
     // AGGIUNGO AL CLICK DELLA VARIABILE PRECEDENTEMENTE SELEZIONATA UNA SERIE DI COMPORTAMENTI 
     play.addEventListener("click",
@@ -23,6 +25,9 @@
             // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
             let arraybomb = randomBombPosition ();
             console.log(arraybomb);
+
+            // valore progressivo punteggio
+            let punteggio = 0;
 
             // DICO CHE AD OGNI CLICK LA PAGINA SI SVUOTA PER POI RIEMPIRSI SUCCESSIVAMENTE COL FOR
             container.innerHTML = "";
@@ -36,19 +41,35 @@
 
                 // Ogni cella ha un numero progressivo, da 1 a 100.
                 squareElement.append(i);
-                for (let i = 0 ; i < arraybomb.lenght ; i++) {
-                    if (squareElement === i) {
-                        squareElement.append(i);
-                        squareElement.classList.add("bomb");
-                    }
-                }
+
+                
 
                 // FUNZIONE DI BACKGROUND COLOR AL CLICK DELLE CELLE
                 squareElement.addEventListener("click",
                     function(){
+                        
+
+                        if(arraybomb.includes(i)){
+
+                            squareElement.classList.add("bomb");
+                            container.classList.add("unclickable");
+
+                            console.log("Ops, hai preso una bomba, il tuo punteggio è " + punteggio );
+                            risultato.innerHTML = "Ops, hai preso una bomba, il tuo punteggio è " + punteggio 
+
+                        } 
+                        else{
+
                         // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata
-                        squareElement.classList.add("cell_clicked")
+                        squareElement.classList.add("cell_clicked", "unclickable")
                         console.log(i);
+
+                        
+                        punteggio++;
+                        console.log("Il tuo punteggio è " + punteggio);
+                        risultato.innerHTML = "Il tuo punteggio è " + punteggio
+
+                        }
                     }
                 )
             }
