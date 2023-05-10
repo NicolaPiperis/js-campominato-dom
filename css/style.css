@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header style */
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    font-size: 35px;
+    font-weight: 800;
+    padding-left: 50px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    margin-right: 50px;
+}
+
+#select_difficulty{
+    margin-right: 35px;
+}
+
+/* main style */
+
+main{
+    height: calc(100vh - 200px);
+    border: 1px black solid;
+    background-color: #7fffd4;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.square{
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.normal_square{
+    height: 50px;
+    width: calc(100% / 9);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hard_square{
+    height: 50px;
+    width: calc(100% / 7);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell_clicked{
+    background-color: aqua;
+}
+
+
+
+
+
+/* footer style */
+
+footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+footer div{
+    padding-left: 50px;
+    font-size: 20px;
+}
